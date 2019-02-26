@@ -1,0 +1,27 @@
+ul{
+    list-style: none;
+}
+
+li{
+    border: black;
+}
+
+header{
+    text-align: center;
+}
+
+#screen{
+    display: flex;
+    width: 30vw;
+    text-align: center;
+}
+
+#column-2{
+    display: flex;
+    width: 70vw;
+    
+}
+
+img {
+    width: 40vw;
+}
