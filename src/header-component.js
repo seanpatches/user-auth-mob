@@ -17,6 +17,7 @@ export function makeProfile(user) {
         <div>
             <span>${user.displayName}</span>
             <img src="${user.photoURL}">
+            <button>Sign Out</button>
         </div>
         `;
 
@@ -35,8 +36,12 @@ export default function loadHeader(options) {
     }
     auth.onAuthStateChanged(user =>{
         if(user){
-            const profileDom = makeProfile(user);
+            const profileDom = makeProfile(user); 
             headerContainer.appendChild(profileDom);
+            const button = headerContainer.querySelector('button'); //ask why we have to place this here rather than after 41
+            button.addEventListener('click', () => {
+                auth.signOut();
+            });
         } else {
             window.location = './auth.html';
         }
