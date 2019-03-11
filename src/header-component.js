@@ -1,3 +1,5 @@
+import { auth } from './firebase.js';
+
 export function makeHeader(){
     const html = `
         <div>
@@ -23,8 +25,20 @@ export function makeProfile(user) {
     return template.content;
 }
 
-export default function loadHeader() {
+export default function loadHeader(options) {
     const headerContainer = document.getElementById('header-container');
     const dom = makeHeader();
     headerContainer.appendChild(dom);
+
+    if(options && options.skipAuth) {
+        return;
+    }
+    auth.onAuthStateChanged(user =>{
+        if(user){
+            const profileDom = makeProfile(user);
+            headerContainer.appendChild(profileDom);
+        } else {
+            window.location = './auth.html';
+        }
+    });
 }
