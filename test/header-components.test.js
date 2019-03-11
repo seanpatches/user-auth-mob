@@ -7,8 +7,8 @@ QUnit.module('HEADER');
 test('display static section of header', assert => {
     //arrange
     const expected = `
-    <div>
-    <img src="./assets/readingRainbow.jpg" alt="website logo">
+    <div id="header">
+    <img src="./assets/readingRainbow.jpg" alt="website logo" id="logo">
     <h1>Book List</h1>
     </div>
     `;
@@ -29,9 +29,10 @@ test('append user\'s data into header', assert => {
     };
 
     const expected = `
-        <div>
-            <span>Phoebe</span>
+        <div id="profile">
             <img src="./phoebe">
+            <span>Phoebe</span>
+            <button>Sign Out</button>
         </div>
     `;
 

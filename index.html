@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./src/main.css">
     <link rel="stylesheet" href="./src/header.css">
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
@@ -13,7 +13,41 @@
 <body>
     <header id="header-container"></header>
     <main>
-
+        <form id="search-form">
+            <label>
+                <input type="text" id="search-bar" placeholder="ENTER SEARCH TERM">
+            </label>
+            <button>Search</button>
+        </form>
+        <section>
+            <ul id="character-list-display">
+                <li>
+                    <p>Rick Sanchez</p>
+                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg">
+                    <p>Human</p>
+                </li>
+                <li>
+                    <p>Rick Sanchez</p>
+                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg">
+                    <p>Human</p>
+                </li>
+                <li>
+                    <p>Rick Sanchez</p>
+                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg">
+                    <p>Human</p>
+                </li>
+                <li>
+                    <p>Rick Sanchez</p>
+                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg">
+                    <p>Human</p>
+                </li>
+                <li>
+                    <p>Rick Sanchez</p>
+                    <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg">
+                    <p>Human</p>
+                </li>
+            </ul>
+        </section>
     </main>
 </body>
 <script type="module" src="./src/index.js"></script>
