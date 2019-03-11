@@ -2,8 +2,8 @@ import { auth } from './firebase.js';
 
 export function makeHeader(){
     const html = `
-        <div>
-            <img src="./assets/readingRainbow.jpg" alt="website logo">
+        <div id="header">
+            <img src="./assets/readingRainbow.jpg" alt="website logo" id="logo">
             <h1>Book List</h1>
         </div>
     `;
@@ -13,13 +13,17 @@ export function makeHeader(){
 }
 
 export function makeProfile(user) {
+    const avatar = user.photoURL || './assets/defaultPhoto.png';
+
     const html = `
-        <div>
+        <div id="profile">
+        <img src="${avatar}">
             <span>${user.displayName}</span>
-            <img src="${user.photoURL}">
             <button>Sign Out</button>
         </div>
         `;
+
+    
 
     const template = document.createElement('template');
     template.innerHTML = html;

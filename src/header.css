@@ -1,9 +1,32 @@
-header div{
+header {
     display: flex;
-    flex-flow: row;
+    justify-content: space-between;
+
 }
 
-img{
+header div {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+
+
+img {
     margin-top: 0px;
-    max-width: 15vw;
+    width: 5vw;
+    border-radius: 100%;
+}
+
+#logo {
+    width: 300px;
+}
+
+#profile {
+    align-self: flex-start;
+}
+
+#header{
+    position: relative;
+    bottom: 70px;
 }
