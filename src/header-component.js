@@ -22,3 +22,9 @@ export function makeProfile(user) {
     template.innerHTML = html;
     return template.content;
 }
+
+export default function loadHeader() {
+    const headerContainer = document.getElementById('header-container');
+    const dom = makeHeader();
+    headerContainer.appendChild(dom);
+}
