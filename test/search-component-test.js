@@ -2,12 +2,18 @@ const test = QUnit.test;
 
 QUnit.module('SEARCH API');
 
-function makeCharTemplate() {
+const data = {
+    name: 'Rick Sanchez',
+    image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+    species: 'Human'
+};
+
+function makeCharTemplate(data) {
     const html = `
         <li>
-            <p>Rick Sanchez</p>
-            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg">
-            <p>Human</p>
+            <p>${data.name}</p>
+            <img src="${data.image}">
+            <p>${data.species}</p>
         </li>
     `;
     const template = document.createElement('template');
@@ -24,7 +30,7 @@ test('static creation of li', assert => {
         </li>
     `;
     // act
-    const result = makeCharTemplate();
+    const result = makeCharTemplate(data);
     // assert
     assert.htmlEqual(result, expected);
-})
+});
