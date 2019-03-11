@@ -33,8 +33,8 @@ test('display static section of header', assert => {
 function makeProfile(user) {
     const html = `
         <div>
-            <span>Phoebe</span>
-            <img src="./phoebe">
+            <span>${user.displayName}</span>
+            <img src="${user.photoURL}">
         </div>
         `;
 
