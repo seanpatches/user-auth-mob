@@ -1,18 +1,8 @@
+import { makeHeader, makeProfile } from '../src/header-component.js';
 const test = QUnit.test;
 
 QUnit.module('HEADER');
 
-function makeHeader(){
-    const html = `
-        <div>
-            <img src="./assets/readingRainbow.jpg" alt="website logo">
-            <h1>Book List</h1>
-        </div>
-    `;
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('display static section of header', assert => {
     //arrange
@@ -30,18 +20,6 @@ test('display static section of header', assert => {
     assert.htmlEqual(result, expected);
 });
 
-function makeProfile(user) {
-    const html = `
-        <div>
-            <span>${user.displayName}</span>
-            <img src="${user.photoURL}">
-        </div>
-        `;
-
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('append user\'s data into header', assert => {
     //arrange
