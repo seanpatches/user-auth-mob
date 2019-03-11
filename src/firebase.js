@@ -4,3 +4,5 @@ var config = {
     authDomain: "user-auth-mob.firebaseapp.com",
 };
 firebase.initializeApp(config);
+
+export const auth = firebase.auth();
