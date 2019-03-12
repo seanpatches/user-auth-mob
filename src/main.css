@@ -6,9 +6,11 @@ flex-flow: row wrap;
 li {
     display: flex;
     flex-flow: column wrap;
-    max-width: 25vw;
+    align-items: center;
+    max-width: 10vw;
     border: solid black 2px;
     text-align: center;
+
 }
 
 li img{

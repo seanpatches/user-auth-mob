@@ -1,3 +1,15 @@
-//write to query
+export function writeToQuery(currentQuery, searchTerm) {
+    const searchParams = new URLSearchParams(currentQuery);
+    searchParams.set('name', searchTerm);
+    searchParams.set('page', 1);
+    return searchParams.toString();
+}
 
-// read quer
+export function readFromQuery(hash) {
+    const searchParams = new URLSearchParams(hash);
+    const queryOptions = {
+        name: searchParams.get('name'),
+        page: Number(searchParams.get('page'))
+    };
+    return queryOptions;
+}
