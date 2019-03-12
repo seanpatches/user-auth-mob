@@ -21,6 +21,8 @@ export default function loadCharacters(characterList) {
 
     if(characterList.error){
         alert('No results found');
+        return;
+
     }
     characterList.results.forEach(character => {
         const dom = makeCharTemplate(character);

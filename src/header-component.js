@@ -42,7 +42,7 @@ export default function loadHeader(options) {
         if(user){
             const profileDom = makeProfile(user); 
             headerContainer.appendChild(profileDom);
-            const button = headerContainer.querySelector('button'); //ask why we have to place this here rather than after 41
+            const button = headerContainer.querySelector('button');
             button.addEventListener('click', () => {
                 auth.signOut();
             });

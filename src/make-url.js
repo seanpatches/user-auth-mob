@@ -1,5 +1,3 @@
-
-
 export default function makeURL(queryOptions) {
     const apiSite = 'https://rickandmortyapi.com/api/character/';
     const url = new URL(apiSite);
