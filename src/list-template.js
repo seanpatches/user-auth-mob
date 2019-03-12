@@ -15,6 +15,13 @@ export function makeCharTemplate(data) {
 const charListDisplay = document.getElementById('character-list-display');
 
 export default function loadCharacters(characterList) {
+    while(charListDisplay.children.length > 0){
+        charListDisplay.lastElementChild.remove();
+    }
+
+    if(characterList.error){
+        alert('No results found');
+    }
     characterList.results.forEach(character => {
         const dom = makeCharTemplate(character);
         charListDisplay.appendChild(dom);
